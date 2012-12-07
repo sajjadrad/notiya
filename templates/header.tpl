@@ -1,0 +1,12 @@
+﻿	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 4.01 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+			<html>
+			<head>
+				<title>{$title}</title>
+				<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+				<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.rtl.min.css" />
+				<script type="text/javascript" src="assets/js/jquery.js"></script>
+				<script type="text/javascript" src="js/script-bt.js"></script>
+				<script type="text/javascript">
+				
+				</script>
+			</head>
