@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	ob_start();
 	require('../libs/Smarty.class.php');
 	require('../controls/conf.php');

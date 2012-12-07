@@ -27,48 +27,19 @@
 					</div>
 				</div>
 				<script type="text/javascript" src="../assets/ajax/ajax.js"></script>
+				<script type="text/javascript" src="../assets/js/scripts.js"></script>
 				<script type="text/javascript">
 					var errorFlag=false;
 					$(document).ready(function(){
 						$('#link-title').keypress(function() {
 							if((errorFlag) && ($('#link-title').val!=''))
 							{
+								errorFlag=false;
 								$('#title-control').removeClass('error');
 								$('#errors').html("");
 						  	}
 						});
 					});
-					function validation(type)
-					{
-						//alert("hi");
-						switch(type)
-						{
-							case 'note':
-								if($('#note-title').val()=='')
-								{
-									errorFlag=true;
-									$('#errors').html("<div class=\"alert alert-error\">عنوان یادداشت را وارد کنید.</div>");
-									$('#title-control').addClass('error');
-									$('#note-title').focus();
-									return false;
-								}
-								return true;
-								break;
-							case 'link':
-								if($('#link-title').val()=='')
-								{
-									errorFlag=true;
-									$('#errors').html("<div class=\"alert alert-error\">عنوان لینک را وارد کنید.</div>");
-									$('#title-control').addClass('error');
-									$('#link-title').focus();
-									return false;
-								}
-								return true;
-								break;
-						}
-						return false;
-					}
-
 				</script>
 {include file="../footer.tpl"}
 				

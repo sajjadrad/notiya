@@ -6,6 +6,9 @@
 				<li>
 					<a href="index.php">خانه</a>
 				</li>
+				<li>
+					<a href="login.php">ورود</a>
+				</li>
 				<ul class="nav pull-left">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">

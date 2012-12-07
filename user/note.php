@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	require('../libs/Smarty.class.php');
 	require('../controls/conf.php');
 	$smarty = new Smarty;

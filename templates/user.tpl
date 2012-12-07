@@ -47,8 +47,6 @@
 							var tempType = $('#type').val();
 							var data = { "type" : tempType}
 							request("ajax/list.php",data,"result");
-							//alert(result);
-							//$('#result').html(result);
 						});
 
 						

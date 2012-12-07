@@ -1,36 +1,25 @@
 ﻿{include file="header.tpl" title="Notiya"}
-		{if $login =='not'}
 			<body>
+				{include file="../templates/user/nav.tpl" title="Note"}
 				<div class="container-fluid">
-					<div class="row">
-						<div class="span4 offset4">
-							<form class="well">
-								<input type="text" name="username">
-								<input type="password" name="password">
-								<input type="submit" name="login" class="btn btn-primary" value="Login">
-							</form>
-						</div>
-					</div>
-				</div>
-			</body>
-		{else if $login=='wrong'}
-			<body>
-				<div id="bt-message">
-					<div id="content">
-						<span id="message-txt"">Username or password is invalid.</span>
-						<div class="message-content" style="margin-top:20px;">
-							<form action="home.php" method="POST">
-									<input name="email" class="span3" type="text" placeholder="Email">
-									<div class="input-append">
-										<input class="span2" type="password" placeholder="Password" name="password">
-										<input class="btn btn-primary" type="submit" value="Login" name="submitLogin">
-									</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</body>
+					<div class="row-fluid">
 
-		{/if}
+						<div class="span4 offset4">
+							<h2>ورود به حساب کاربری</h2>
+							<form style="text-align:center;" class="well">
+								
+								<input class="span8" type="text" placeholder="ایمیل">
+							
+
+								<input class="span8" type="password" placeholder="کلمه عبور">
+							<div class="form-actions">	
+								<input class="btn btn-primary" type="submit" value="ورود">
+								<input class="btn btn-warning" type="submit" value="ثبت نام">
+								
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
 {include file="footer.tpl"}
 				

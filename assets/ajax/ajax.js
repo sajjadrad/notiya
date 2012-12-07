@@ -1,4 +1,4 @@
-﻿function request(url_str,param,id)
+function request(url_str,param,id)
 {
 	var response="";
 	$.ajax({
@@ -8,9 +8,5 @@
 	})
 	.done(function( res ) {
 		$('#'+id).html(res);
-	  	//response = res;
 	});
-	//alert(response);
-	// /response=String(response);
-	//return response;
 }

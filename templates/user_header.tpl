@@ -6,7 +6,6 @@
 				<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.rtl.min.css" />
 				<script type="text/javascript" src="../assets/js/jquery-1.8.1.js"></script>
 				<script type="text/javascript" src="../assets/js/bootstrap.js"></script>
-				<script type="text/javascript" src="../js/script-bt.js"></script>
 				<script type="text/javascript">
 				
 				</script>

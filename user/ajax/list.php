@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	require('../../controls/conf.php');
 
 	if(isset($_POST['type']))
