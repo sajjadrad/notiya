@@ -1,7 +1,7 @@
 ﻿<div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="#">نوتیا</a>
+			<a class="brand" href="http://sajjadrad.com/notiya">نوتیا</a>
 			<ul class="nav">
 				<li>
 					<a href="index.php">خانه</a>
@@ -9,6 +9,7 @@
 				<li>
 					<a href="login.php">ورود</a>
 				</li>
+				{if isset($nav)}
 				<ul class="nav pull-left">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -22,6 +23,11 @@
 						</ul>
 					</li>
 				</ul>
+				{else}
+				<li>
+					<a href="signup.php">ثبت نام</a>
+				</li>
+				{/if}
 			</ul>
 		</div>
 	</div>

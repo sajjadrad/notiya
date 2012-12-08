@@ -9,6 +9,7 @@
 		$smarty->debugging = false;
 		$smarty->caching = true;
 		$smarty->cache_lifetime = 120;
+		$smarty->assign("nav","true",true);
 		if(isset($_GET['type']))
 		{
 			$_noteType=$_GET['type'];

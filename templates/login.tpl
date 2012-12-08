@@ -1,6 +1,6 @@
 ﻿{include file="header.tpl" title="Notiya"}
 			<body>
-				{include file="../templates/user/nav.tpl" title="Note"}
+				{include file="../templates/user/nav.tpl" title="Notiya"}
 				<div class="container-fluid">
 					<div class="row-fluid">
 

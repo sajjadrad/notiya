@@ -9,6 +9,7 @@
 		$smarty->debugging = false;
 		$smarty->caching = false;
 		$smarty->cache_lifetime = 120;
+		$smarty->assign("nav","true",true);
 		if(isset($_GET['id']))
 		{
 			$_uniqid=$_GET['id'];
