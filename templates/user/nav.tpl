@@ -18,7 +18,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="profile.php">پروفایل</a></li>
 							<li><a href="setting.php">تنظیمات</a></li>
-							<li><a href="logout.php">خروج</a></li>
+							<li><a href="../logout.php">خروج</a></li>
 						</ul>
 					</li>
 				</ul>

@@ -6,6 +6,9 @@
 
 						<div class="span4 offset4">
 							<h2>ثبت نام</h2>
+							{if isset($error)}
+								<div class="alert alert-error">{$error}</div>
+							{/if}
 							<form action="signup.php" method="POST" autocomplete="off" style="text-align:center;" class="well">
 								<input style="direction:ltr;text-align:left;" class="span128" type="text" name="email" placeholder="ایمیل">
 								<input name="password" class="span12" type="password" placeholder="کلمه عبور">

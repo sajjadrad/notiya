@@ -11,13 +11,11 @@
 							{/if}
 							<form method="POST" action="login.php" style="text-align:center;" class="well">
 								
-								<input name="email" style="direction:ltr;text-align:left;" class="span8" type="text" placeholder="ایمیل">
-							
-
-								<input name="password" class="span8" type="password" placeholder="کلمه عبور">
+								<input name="email" style="direction:ltr;text-align:left;" class="span12" type="text" placeholder="ایمیل">
+								<input name="password" class="span12" type="password" placeholder="کلمه عبور">
 							<div class="form-actions">	
 								<input class="btn btn-primary" type="submit" value="ورود">
-								<button href="signup.php" class="btn btn-warning">ثبت نام</button>
+								<a href="signup.php" class="btn btn-warning">ثبت نام</a>
 								
 							</div>
 							</form>
