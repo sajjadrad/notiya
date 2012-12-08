@@ -6,15 +6,18 @@
 
 						<div class="span4 offset4">
 							<h2>ورود به حساب کاربری</h2>
-							<form style="text-align:center;" class="well">
+							{if isset($error)}
+								<div class="alert alert-error">{$error}</div>
+							{/if}
+							<form method="POST" action="login.php" style="text-align:center;" class="well">
 								
-								<input class="span8" type="text" placeholder="ایمیل">
+								<input name="email" style="direction:ltr;text-align:left;" class="span8" type="text" placeholder="ایمیل">
 							
 
-								<input class="span8" type="password" placeholder="کلمه عبور">
+								<input name="password" class="span8" type="password" placeholder="کلمه عبور">
 							<div class="form-actions">	
 								<input class="btn btn-primary" type="submit" value="ورود">
-								<input class="btn btn-warning" type="submit" value="ثبت نام">
+								<button href="signup.php" class="btn btn-warning">ثبت نام</button>
 								
 							</div>
 							</form>
