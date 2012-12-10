@@ -26,6 +26,11 @@
 					$_SESSION['_validUser']=$user->id;
 					header('Location: user/index.php');
 				}
+				else
+				{
+					$smarty->assign("error","ایمیل یا کلمه عبور اشتباه است.",true);
+					$smarty->display('login.tpl');
+				}
 			}
 			else
 			{
