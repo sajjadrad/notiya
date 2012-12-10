@@ -7,4 +7,5 @@
 		header('Location: index.php');
 	}
 	ob_flush();
+	//
 ?>

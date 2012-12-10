@@ -1,4 +1,4 @@
-﻿{include file="header.tpl" title="Notiya"}
+{include file="header.tpl" title="Notiya"}
 			<body>
 				{include file="../templates/user/nav.tpl" title="Note"}
 				<div class="container-fluid">

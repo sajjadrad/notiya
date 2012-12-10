@@ -37,4 +37,5 @@
 	}
 	else
 		$smarty->display('signup.tpl');
+	//
 ?>

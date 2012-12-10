@@ -38,4 +38,5 @@
 			$smarty->display('login.tpl');
 	}
 	ob_flush();
+	//
 ?>

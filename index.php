@@ -11,4 +11,5 @@
 		$smarty->assign("nav","true",true);
 	}
 	$smarty->display('index.tpl');
+	//
 ?>
