@@ -14,6 +14,17 @@ function validation(type)
                 }
                 return true;
                 break;
+              case 'wiki':
+                if($('#wiki-title').val()=='')
+                {
+                  errorFlag=true;
+                  $('#errors').html("<div class=\"alert alert-error\">عنوان مطلب را وارد کنید.</div>");
+                  $('#title-control').addClass('error');
+                  $('#wiki-title').focus();
+                  return false;
+                }
+                return true;
+                break;
               case 'link':
                 if($('#link-title').val()=='')
                 {

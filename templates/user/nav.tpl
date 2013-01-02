@@ -6,9 +6,6 @@
 				<li>
 					<a href="index.php">خانه</a>
 				</li>
-				<li>
-					<a href="login.php">ورود</a>
-				</li>
 				{if isset($nav)}
 				<ul class="nav pull-left">
 					<li class="dropdown">
@@ -24,6 +21,9 @@
 					</li>
 				</ul>
 				{else}
+				<li>
+					<a href="login.php">ورود</a>
+				</li>
 				<li>
 					<a href="signup.php">ثبت نام</a>
 				</li>

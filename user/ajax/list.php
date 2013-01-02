@@ -26,6 +26,23 @@
 						echo $output;
 					}
 					break;
+				case 'wiki':
+					$notes=R::find('note_head','note_type=? and user_id=?',array("wiki",$_userid));
+					if($notes)
+					{
+						$output="<table class=\"table table-bordered table-striped\"><colgroup><col class=\"span1\"><col class=\"span7\"></colgroup><thead><tr><th>ردیف</th><th>مطلب</th></tr></thead><tbody>";
+						$i=1;
+						foreach ($notes as $note)
+						{
+							//echo $note['note_title'];
+							$output=$output."<tr><td>".$i."</td><td><a href=
+							\"note.php?id=".$note['uniqid']."\">".$note['note_title']."</a></td></tr>";
+							$i++;
+						}
+						$output=$output."</tbody></table>";
+						echo $output;
+					}
+					break;
 				case 'link':
 					$notes=R::find('note_head','note_type=? and user_id=?',array("link",$_userid));
 					if($notes)

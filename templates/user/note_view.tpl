@@ -19,6 +19,10 @@
 										{if $type == 'note'}
 											{$title}
 											{$content}
+										{else if $type == 'wiki'}
+											{$title}
+											<div class="well">{$map}</div>
+											{$content}
 										{else if $type == 'link'}
 											{$title}
 											{$content}
@@ -55,6 +59,12 @@
 										var editable="<input id=\"note-title\" class=\"span6\" value=\""+title+"\" type=\"text\" placeholder=\"عنوان یادداشت\"><textarea id=\"note-content\" class=\"span12\" rows=\"4\" placeholder=\"متن یادداشت\">"+content+"</textarea><p><a id=\"save\" class=\"btn btn-success\">ذخیره</a> <a id=\"cancel\" class=\"btn btn-danger\">انصراف</a></p>"
 										$('#content').html(editable);
 										break;
+									case 'wiki':
+										title=$('#wiki-title').html();
+										content=$('#wiki-content').html();
+										var editable="<input id=\"wiki-title\" class=\"span6\" value=\""+title+"\" type=\"text\" placeholder=\"عنوان یادداشت\"><textarea id=\"wiki-content\" class=\"span12\" rows=\"4\" placeholder=\"متن یادداشت\">"+content+"</textarea><p><a id=\"save\" class=\"btn btn-success\">ذخیره</a> <a id=\"cancel\" class=\"btn btn-danger\">انصراف</a></p>"
+										$('#content').html(editable);
+										break;
 									case 'link':
 										title=$('#link-title').html();
 										content=$('#link-content').html();
@@ -75,6 +85,11 @@
 										$('#edit').css("display","");
 										$('#content').html(uneditable);
 										break;
+									case 'wiki':
+										var uneditable="<h2 id=\"wiki-title\">"+title+"</h2><p id=\"wiki-content\">"+content+"</p>";
+										$('#edit').css("display","");
+										$('#content').html(uneditable);
+										break;
 									case 'link':
 										var uneditable="<h2 id=\"link-title\">"+title+"</h2><p id=\"link-content\" class=\"lead\" style=\"direction:ltr;text-align:left\">"+content+"</p><p id=\"link-des\">"+des+"</p>";
 										$('#edit').css("display","");
@@ -82,7 +97,8 @@
 										$('#content').html(uneditable);
 										break;
 								}
-							});
+							}); 
+
 						});
 						function validation(type)
 						{

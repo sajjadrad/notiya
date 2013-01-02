@@ -9,6 +9,7 @@
 									<select id="type" name="type">
 										<option value="note">یادداشت</option>
 										<option value="link">لینک</option>
+										<option value="wiki">مطلب</option>
 									</select>
 								</div>
 								<div class="row-fluid">
@@ -26,16 +27,8 @@
 				<script type="text/javascript" src="../assets/ajax/ajax.js"></script>
 				<script type="text/javascript">
 					var errorFlag=false;
-					$(document).ready(function(){
-
-						$('#note-title').keypress(function() {
-							if((errorFlag) && ($('#note-title').val!=''))
-							{
-								$('#title-control').removeClass('error');
-								$('#errors').html("");
-								errorFlag=false;
-						  	}
-						});
+					$(document).ready(function()
+					{
 						$('#add').click(function()
 						{
 							var temp=$('#type').val();
@@ -48,9 +41,6 @@
 							var data = { "type" : tempType}
 							request("ajax/list.php",data,"result");
 						});
-
-						
-
 					});
 					
 				</script>

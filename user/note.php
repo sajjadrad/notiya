@@ -36,6 +36,28 @@
 						}
 						$smarty->display('../templates/user/note_view.tpl');
 						break;
+					case 'wiki':
+						$smarty->assign("type","wiki",true);
+						$metas=$note->ownNote_meta;
+						$title="<h2 id=\"wiki-title\">".$note->note_title."</h2>";
+						$smarty->assign("title",$title,true);
+						foreach ($metas as $meta)
+						{
+							switch($meta['meta_title'])
+							{
+								case 'wiki_content':
+									$content=$meta['meta_value'];
+									require_once("../controls/wiki/wikia.inc.php");
+									$content=htmlspecialchars($content);
+									$map=generateMap($content);
+									$content=parse($content);
+									$smarty->assign("content",$content,true);
+									$smarty->assign("map",$map,true);
+									break;
+							}
+						}
+						$smarty->display('../templates/user/note_view.tpl');
+						break;
 					case 'link':
 						$smarty->assign("type","link",true);
 						$metas=$note->ownNote_meta;

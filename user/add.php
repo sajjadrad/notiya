@@ -19,6 +19,10 @@
 					$smarty->assign("type",$_noteType,true);
 					$smarty->display('../templates/user/note.tpl');
 					break;
+				case 'wiki':
+					$smarty->assign("type",$_noteType,true);
+					$smarty->display('../templates/user/wiki.tpl');
+					break;
 				case 'link':
 					$smarty->assign("type",$_noteType,true);
 					$smarty->display('../templates/user/link.tpl');
@@ -47,6 +51,26 @@
 						$_note->uniqid=uniqid();
 						list($_noteMeta)=R::dispense('note_meta',2);
 						$_noteMeta->meta_title="note_content";
+						$_noteMeta->meta_value=$_noteContent;
+						$_note->ownNote_meta=array($_noteMeta);
+						R::store($_note);
+						echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
+					}
+					break;
+				case 'wiki':
+					if(isset($_POST['wiki-title']))
+					{
+						$_noteTitle=$_POST['wiki-title'];
+						$_noteContent=$_POST['wiki-content'];
+						$_note=R::dispense('note_head');
+						$_note->user_id=$_SESSION['_validUser'];
+						$_note->note_title=$_noteTitle;
+						$_note->note_type="wiki";
+						date_default_timezone_set("Asia/Tehran");
+						$_note->create_date=date("d M Y - h:i:s A");
+						$_note->uniqid=uniqid();
+						list($_noteMeta)=R::dispense('note_meta',2);
+						$_noteMeta->meta_title="wiki_content";
 						$_noteMeta->meta_value=$_noteContent;
 						$_note->ownNote_meta=array($_noteMeta);
 						R::store($_note);
